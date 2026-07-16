@@ -100,7 +100,24 @@ export default function AboutSection() {
           </div>
 
           {/* Stats */}
-          <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-center justify-center gap-5 border-t border-white/10 bg-black/45 px-6 py-6 backdrop-blur-xl transition-all duration-500 group-hover:bg-black/60 sm:gap-8 sm:px-8 sm:py-7">
+          <div className="absolute inset-x-0 bottom-0 flex items-center justify-center gap-3 border-t border-white/10 bg-black/45 px-4 py-5 backdrop-blur-xl transition-all duration-500 group-hover:bg-black/60 sm:gap-8 sm:px-8 sm:py-7">
+            <div className="flex-1 min-w-0 text-center">
+              <p className="text-3xl font-bold text-[#F1B5D5] sm:text-4xl">18</p>
+              <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-[#D3C2C9] sm:text-xs">
+                Projects Built
+              </p>
+            </div>
+
+            <div className="h-12 w-px shrink-0 bg-white/10" />
+
+            <div className="flex-1 min-w-0 text-center">
+              <p className="text-3xl font-bold text-[#F1B5D5] sm:text-4xl">2+</p>
+              <p className="mt-1 text-[10px] uppercase tracking-[0.18em] text-[#D3C2C9] sm:text-xs">
+                Years Learning
+              </p>
+            </div>
+          </div>
+          {/* <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-center justify-center gap-5 border-t border-white/10 bg-black/45 px-6 py-6 backdrop-blur-xl transition-all duration-500 group-hover:bg-black/60 sm:gap-8 sm:px-8 sm:py-7">
             <div className="text-center">
               <p className="text-4xl font-bold text-[#F1B5D5]">18</p>
               <p className="mt-1 text-xs uppercase tracking-[0.18em] text-[#D3C2C9]">
@@ -116,16 +133,7 @@ export default function AboutSection() {
                 Years Learning
               </p>
             </div>
-
-            {/* <div className="hidden sm:block h-12 w-px bg-white/10" /> */}
-
-            {/* <div className="text-center">
-              <p className="text-4xl font-bold text-[#F1B5D5]">∞</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.18em] text-[#D3C2C9]">
-                Curiosity
-              </p>
-            </div> */}
-          </div>
+          </div> */}
         </div>
 
         {/* Content */}
