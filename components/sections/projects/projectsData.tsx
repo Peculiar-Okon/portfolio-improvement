@@ -1,0 +1,103 @@
+export const projects = [
+  {
+    id: 1,
+    name: "CommitMate",
+    category: "AI Developer Tool",
+    description:
+      "AI-powered Git copilot helping developers simplify complex Git workflows and commit with confidence.",
+    image: "/projects/commitmate.png",
+    tech: ["React", "NestJS", "OpenAI", "PostgreSQL"],
+    status: "Active Development",
+    started: "July 2026",
+    role: "Solo Developer",
+    progress: 72,
+    updated: "3 days ago",
+    demo: "#",
+    github: "#",
+  },
+
+  {
+    id: 2,
+    name: "DotOrg",
+    category: "Productivity",
+    description:
+      "A digital decluttering workspace that helps users organize files intelligently.",
+    image: "/projects/dotorg.png",
+    tech: ["React", "Supabase", "TypeScript"],
+    status: "Designing",
+    started: "2026",
+    role: "Solo Developer",
+    progress: 38,
+    updated: "1 week ago",
+    demo: "#",
+    github: "#",
+  },
+
+  {
+    id: 3,
+    name: "Foundry",
+    category: "Business Platform",
+    description:
+      "Restaurant operations platform built to simplify management and analytics.",
+    image: "/projects/foundry.png",
+    tech: ["Next.js", "NestJS"],
+    status: "Planning",
+    started: "2026",
+    role: "Solo Developer",
+    progress: 15,
+    updated: "Recently",
+    demo: "#",
+    github: "#",
+  },
+
+  {
+    id: 4,
+    name: "PersonaFied",
+    category: "Journaling",
+    description:
+      "Thoughtful journaling designed around reflection instead of endless scrolling.",
+    image: "/projects/personafied.png",
+    tech: ["React", "Supabase"],
+    status: "Completed",
+    started: "2025",
+    role: "Solo Developer",
+    progress: 100,
+    updated: "Completed",
+    demo: "#",
+    github: "#",
+  },
+
+  {
+    id: 5,
+    name: "MealRadar",
+    category: "Campus App",
+    description:
+      "Helping students discover meals, nutrition and cafeteria menus in real time.",
+    image: "/projects/mealradar.png",
+    tech: ["React"],
+    status: "Prototype",
+    started: "2025",
+    role: "Team Project",
+    progress: 40,
+    updated: "Archived",
+    demo: "#",
+    github: "#",
+  },
+
+  {
+    id: 6,
+    name: "Skyline",
+    category: "Travel",
+    description:
+      "A modern travel experience focused on elegant interfaces and memorable exploration.",
+    image: "/projects/skyline.png",
+    tech: ["Next.js"],
+    status: "Redesigning",
+    started: "2026",
+    role: "Solo Developer",
+    progress: 10,
+    updated: "Today",
+    demo: "#",
+    github: "#",
+  },
+];
