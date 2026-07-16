@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function ProjectsHeader() {
   return (
@@ -20,14 +21,14 @@ export default function ProjectsHeader() {
         </p>
       </div>
 
-      <button className="group flex items-center gap-3 font-mono text-sm uppercase tracking-[0.18em] text-[#D3C2C9] transition-colors hover:text-[#F1B5D5]">
+      <Link href="#projects" className="group flex items-center gap-3 font-mono text-sm uppercase tracking-[0.18em] text-[#D3C2C9] transition-colors hover:text-[#F1B5D5]">
         View all
 
         <ArrowRight
           size={16}
           className="transition-transform duration-300 group-hover:translate-x-1"
         />
-      </button>
+      </Link>
     </div>
   );
 }

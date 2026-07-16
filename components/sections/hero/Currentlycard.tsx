@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const items = [
   {
@@ -44,12 +45,12 @@ export default function CurrentlyCard() {
             </h3>
           </div>
 
-          <button className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-300 group-hover:border-[#F1B5D5]/30 group-hover:bg-[#F1B5D5]/10">
+          <Link href="#projects" aria-label="View projects" className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-md transition-all duration-300 group-hover:border-[#F1B5D5]/30 group-hover:bg-[#F1B5D5]/10">
             <ArrowUpRight
               size={18}
               className="text-white transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
             />
-          </button>
+          </Link>
         </div>
 
         {/* Timeline */}

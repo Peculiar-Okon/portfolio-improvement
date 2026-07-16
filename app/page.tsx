@@ -5,6 +5,7 @@ import ExpertiseSection from "@/components/sections/techStack/expertiseSection";
 import AboutSection from "@/components/sections/about";
 import ContactSection from "@/components/sections/contacts";
 import Footer from "@/components/sections/footer";
+import WhatSetsMeApart from "@/components/sections/whatSetsMeApart";
 
 export default function Home() {
   return (
@@ -13,9 +14,10 @@ export default function Home() {
 
       <main>
         <Hero />
+        <AboutSection />
         <Projects />
         <ExpertiseSection />
-        <AboutSection />
+        <WhatSetsMeApart />
         <ContactSection />
         <Footer />
         {/* Your Hero */}

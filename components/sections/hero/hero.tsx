@@ -11,7 +11,7 @@ import IdentityCard from "./profileCard";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden px-6 pt-36 pb-24 lg:px-10">
+    <section id="home" className="relative overflow-hidden px-6 pb-24 pt-36 lg:px-10">
       {/* Background */}
       <BackgroundBlobs />
 
@@ -20,13 +20,18 @@ export default function Hero() {
         <div className="relative z-10 flex min-h-[600px] flex-col justify-center">
           <Announcement />
 
-          <h1 className="mt-10 max-w-xl text-6xl font-extrabold leading-none tracking-[-0.06em] text-[#EAE0E2] md:text-7xl lg:text-8xl">
-            Hi, I'm Pearl.
+          <h1 className="mt-10 text-6xl font-extrabold leading-none tracking-[-0.06em] md:text-7xl lg:text-8xl">
+            <span className="block text-[#EAE0E2]">
+              Hi, I'm
+            </span>
+
+            <span className="block bg-gradient-to-r from-[#F1B5D5] via-[#FFE7F2] to-[#F1B5D5] bg-clip-text text-transparent">
+              Pearl.
+            </span>
           </h1>
 
           <p className="mt-8 max-w-xl text-xl leading-relaxed text-[#D3C2C9] md:text-2xl">
-            Software Engineer building thoughtful software that simplifies
-            complex workflows and creates intuitive digital experiences.
+            Curious about how systems work, passionate about building products that do.
           </p>
 
           <div className="mt-12">

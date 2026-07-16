@@ -20,7 +20,7 @@ export default function Projects() {
     );
 
   return (
-    <section className="mx-auto max-w-7xl px-6 py-32">
+    <section id="projects" className="mx-auto max-w-7xl scroll-mt-24 px-6 py-32">
       <ProjectsHeader />
 
       <div className="mt-16">

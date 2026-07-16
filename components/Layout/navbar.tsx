@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { type MouseEvent, useState } from "react";
 import clsx from "clsx";
 
 const navItems = [
-  { name: "Home", href: "#" },
+  { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Projects", href: "#projects" },
   { name: "Writing", href: "#writing" },
@@ -15,12 +15,54 @@ const navItems = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
+  const handleAnchorNavigation = (
+    event: MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    const target = document.getElementById(href.slice(1));
+
+    // Keep the Writing link as a placeholder until that section exists.
+    if (!target) return;
+
+    event.preventDefault();
+
+    const startPosition = window.scrollY;
+    const targetPosition = Math.max(
+      0,
+      startPosition + target.getBoundingClientRect().top - 96
+    );
+    const distance = targetPosition - startPosition;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      window.scrollTo(0, targetPosition);
+    } else {
+      const duration = Math.min(1400, Math.max(800, Math.abs(distance) * 0.45));
+      const startTime = performance.now();
+
+      const animateScroll = (currentTime: number) => {
+        const progress = Math.min((currentTime - startTime) / duration, 1);
+        const easedProgress = 1 - Math.pow(1 - progress, 4);
+
+        window.scrollTo(0, startPosition + distance * easedProgress);
+
+        if (progress < 1) requestAnimationFrame(animateScroll);
+      };
+
+      requestAnimationFrame(animateScroll);
+    }
+
+    if (window.location.hash !== href) {
+      window.history.pushState(null, "", href);
+    }
+  };
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#12131ACC]/80 backdrop-blur-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
         {/* Logo */}
         <Link
-          href="/"
+          href="#home"
+          onClick={(event) => handleAnchorNavigation(event, "#home")}
           className="text-2xl font-bold tracking-tight text-[#E3E1EC]"
         >
           Pearl
@@ -32,6 +74,7 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
+              onClick={(event) => handleAnchorNavigation(event, item.href)}
               className={clsx(
                 "relative text-xs font-semibold uppercase tracking-[0.15em] transition-all duration-300",
                 index === 0
@@ -51,6 +94,7 @@ export default function Navbar() {
         {/* Desktop Contact Button */}
         <Link
           href="#contact"
+          onClick={(event) => handleAnchorNavigation(event, "#contact")}
           className="hidden rounded-full border border-[#F1B5D5] px-6 py-2 text-xs font-semibold uppercase tracking-[0.15em] text-[#F1B5D5] transition-all duration-300 hover:bg-[#F1B5D5] hover:text-[#09090B] md:inline-flex"
         >
           Contact
@@ -77,7 +121,10 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              onClick={() => setOpen(false)}
+              onClick={(event) => {
+                setOpen(false);
+                handleAnchorNavigation(event, item.href);
+              }}
               className="py-4 text-sm font-medium text-[#C8C5CA] transition hover:text-white"
             >
               {item.name}
@@ -86,7 +133,10 @@ export default function Navbar() {
 
           <Link
             href="#contact"
-            onClick={() => setOpen(false)}
+            onClick={(event) => {
+              setOpen(false);
+              handleAnchorNavigation(event, "#contact");
+            }}
             className="mt-6 inline-flex w-fit rounded-full border border-[#F1B5D5] px-6 py-3 text-sm font-semibold text-[#F1B5D5] transition hover:bg-[#F1B5D5] hover:text-[#09090B]"
           >
             Contact

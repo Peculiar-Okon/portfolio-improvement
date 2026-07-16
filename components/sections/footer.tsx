@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { type MouseEvent } from "react";
 import { ArrowUp, } from "lucide-react";
 import {
   FaGithub,
@@ -18,22 +19,63 @@ const navigation = [
 const socials = [
   {
     name: "Twitter",
-    href: "https://x.com/",
+    href: "https://x.com/SheThinksInCode",
     icon: FaXTwitter,
   },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/",
+    href: "https://linkedin.com/in/Peculiar-Kenedy-b94903329",
     icon: FaLinkedin,
   },
   {
     name: "GitHub",
-    href: "https://github.com/",
+    href: "https://github.com/Peculiar-Okon",
     icon: FaGithub,
   },
 ];
 
 export default function Footer() {
+  const handleAnchorNavigation = (
+    event: MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    const target = document.getElementById(href.slice(1));
+
+    if (!target) return;
+
+    event.preventDefault();
+
+    const startPosition = window.scrollY;
+    const targetPosition = Math.max(
+      0,
+      startPosition + target.getBoundingClientRect().top - 96
+    );
+    const distance = targetPosition - startPosition;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      window.scrollTo(0, targetPosition);
+    } else {
+      const duration = Math.min(1400, Math.max(800, Math.abs(distance) * 0.45));
+      let startTime: number | undefined;
+
+      const animateScroll = (currentTime: number) => {
+        startTime ??= currentTime;
+        const progress = Math.min((currentTime - startTime) / duration, 1);
+        const easedProgress = 1 - Math.pow(1 - progress, 4);
+
+        window.scrollTo(0, startPosition + distance * easedProgress);
+
+        if (progress < 1) requestAnimationFrame(animateScroll);
+      };
+
+      requestAnimationFrame(animateScroll);
+    }
+
+    if (window.location.hash !== href) {
+      window.history.pushState(null, "", href);
+    }
+  };
+
   return (
     <footer className="relative overflow-hidden border-t border-white/5 bg-[#161214]/60 px-6 py-24 backdrop-blur-xl lg:px-10">
 
@@ -88,6 +130,7 @@ export default function Footer() {
                   <Link
                     key={item.name}
                     href={item.href}
+                    onClick={(event) => handleAnchorNavigation(event, item.href)}
                     className="group flex w-fit items-center text-[#D3C2C9] transition-all duration-300 hover:text-white"
                   >
                     <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -162,13 +205,9 @@ export default function Footer() {
               Terms
             </Link>
 
-            <button
-              onClick={() =>
-                window.scrollTo({
-                  top: 0,
-                  behavior: "smooth",
-                })
-              }
+            <Link
+              href="#home"
+              onClick={(event) => handleAnchorNavigation(event, "#home")}
               className="group flex items-center gap-2 text-[#EAE0E2] transition-colors hover:text-[#F1B5D5]"
             >
               Top
@@ -178,7 +217,7 @@ export default function Footer() {
                 className="transition-transform duration-300 group-hover:-translate-y-1"
               />
 
-            </button>
+            </Link>
 
           </div>
 

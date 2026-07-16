@@ -21,7 +21,7 @@ export default function HeroButtons() {
 
       {/* Secondary Button */}
       <Link
-        href="https://github.com/yourusername"
+        href="https://github.com/Peculiar-Okon"
         target="_blank"
         rel="noopener noreferrer"
         className="group inline-flex h-16 items-center justify-center gap-3 rounded-xl border border-white/10 bg-white/5 px-10 text-base font-bold text-[#EAE0E2] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-[#F1B5D5]/40 hover:bg-white/10"

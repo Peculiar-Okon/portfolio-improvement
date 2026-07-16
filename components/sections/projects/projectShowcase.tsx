@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+import Image, { type StaticImageData } from "next/image";
 import { ArrowUpRight, GitBranchIcon } from "lucide-react";
 
 interface Project {
@@ -9,16 +9,17 @@ interface Project {
   name: string;
   category: string;
   description: string;
-  image: string;
+  image: StaticImageData;
   tech: string[];
   status: string;
   started: string;
   role: string;
   progress: number;
-  updated: string;
   demo: string;
   github: string;
 }
+
+type ProjectUpdates = Record<number, string | null>;
 
 export default function ProjectShowcase({
   projects,
@@ -27,6 +28,33 @@ export default function ProjectShowcase({
   projects: Project[];
   current: number;
 }) {
+  const [updates, setUpdates] = useState<ProjectUpdates | null>(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const loadProjectUpdates = async () => {
+      try {
+        const response = await fetch("/api/projects/updates", {
+          signal: controller.signal,
+        });
+
+        if (!response.ok) return;
+
+        const data = (await response.json()) as { updates: ProjectUpdates };
+        setUpdates(data.updates);
+      } catch (error) {
+        if ((error as Error).name !== "AbortError") {
+          setUpdates({});
+        }
+      }
+    };
+
+    loadProjectUpdates();
+
+    return () => controller.abort();
+  }, []);
+
   return (
     <div className="overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.02] shadow-[0_40px_120px_rgba(0,0,0,0.16)]">
       <div
@@ -35,7 +63,7 @@ export default function ProjectShowcase({
       >
         {projects.map((project) => (
           <div key={project.id} className="min-w-full p-4 sm:p-6 lg:p-8">
-            <ProjectSlide project={project} />
+            <ProjectSlide project={project} latestCommit={updates?.[project.id]} />
           </div>
         ))}
       </div>
@@ -43,7 +71,13 @@ export default function ProjectShowcase({
   );
 }
 
-function ProjectSlide({ project }: { project: Project }) {
+function ProjectSlide({
+  project,
+  latestCommit,
+}: {
+  project: Project;
+  latestCommit: string | null | undefined;
+}) {
   const [showMeta, setShowMeta] = useState(false);
 
   return (
@@ -139,7 +173,15 @@ function ProjectSlide({ project }: { project: Project }) {
           <OverlayStat label="Started" value={project.started} />
           <OverlayStat label="Role" value={project.role} />
           <OverlayStat label="Progress" value={`${project.progress}% Complete`} />
-          <OverlayStat label="Updated" value={project.updated} />
+          <OverlayStat
+            label="Updated"
+            value={formatRelativeTime(latestCommit)}
+            title={
+              latestCommit
+                ? `Latest GitHub commit: ${new Date(latestCommit).toLocaleString()}`
+                : undefined
+            }
+          />
         </div>
 
         <div className="mt-6 flex flex-wrap gap-4">
@@ -167,17 +209,48 @@ function ProjectSlide({ project }: { project: Project }) {
 function OverlayStat({
   label,
   value,
+  title,
 }: {
   label: string;
   value: string;
+  title?: string;
 }) {
   return (
     <div className="rounded-3xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl">
       <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-[#EAE0E2]/50">
         {label}
       </p>
-      <p className="mt-3 text-lg font-semibold text-white">{value}</p>
+      <p className="mt-3 text-lg font-semibold text-white" title={title}>
+        {value}
+      </p>
     </div>
   );
 }
 
+function formatRelativeTime(commitDate: string | null | undefined) {
+  if (commitDate === undefined) return "Checking GitHub…";
+  if (commitDate === null) return "Unavailable";
+
+  const elapsedSeconds = Math.max(
+    0,
+    Math.floor((Date.now() - new Date(commitDate).getTime()) / 1000)
+  );
+  const intervals = [
+    ["year", 31_536_000],
+    ["month", 2_592_000],
+    ["week", 604_800],
+    ["day", 86_400],
+    ["hour", 3_600],
+    ["minute", 60],
+  ] as const;
+
+  for (const [unit, seconds] of intervals) {
+    const amount = Math.floor(elapsedSeconds / seconds);
+
+    if (amount >= 1) {
+      return `${amount} ${unit}${amount === 1 ? "" : "s"} ago`;
+    }
+  }
+
+  return "Just now";
+}

@@ -53,7 +53,7 @@ const expertise: ExpertiseItem[] = [
 
 export default function ExpertiseSection() {
   return (
-    <section className="px-6 py-28 lg:px-10">
+    <section id="expertise" className="scroll-mt-24 px-6 py-28 lg:px-10">
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
           <p className="font-mono text-sm uppercase tracking-[0.3em] text-[#F1B5D5]">

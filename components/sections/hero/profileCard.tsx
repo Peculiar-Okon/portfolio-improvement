@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export default function IdentityCard() {
@@ -17,7 +18,7 @@ export default function IdentityCard() {
         {/* Left */}
         <div className="flex min-w-0 flex-1 flex-col gap-4 sm:flex-row sm:items-center">
           {/* Profile */}
-          <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-[22px] border border-[#F1B5D5]/20 bg-[#1A1A1F] shadow-lg sm:h-24 sm:w-24">
+          {/* <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-[22px] border border-[#F1B5D5]/20 bg-[#1A1A1F] shadow-lg sm:h-24 sm:w-24">
             <Image
               src="/images/profile.jpg"
               alt="Pearl Essien"
@@ -25,12 +26,12 @@ export default function IdentityCard() {
               priority
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
-          </div>
+          </div> */}
 
           {/* Text */}
           <div className="min-w-0">
             <h3 className="text-2xl font-bold tracking-tight text-[#EAE0E2]">
-              Pearl Essien
+              Peculiar Kenedy
             </h3>
 
             <p className="mt-2 text-sm text-[#D3C2C9]">
@@ -46,12 +47,12 @@ export default function IdentityCard() {
         </div>
 
         {/* Arrow */}
-        <button className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#EAE0E2] backdrop-blur-md transition-all duration-300 group-hover:border-[#F1B5D5]/30 group-hover:bg-[#F1B5D5]/10">
+        <Link href="#about" aria-label="Read about Pearl Essien" className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-[#EAE0E2] backdrop-blur-md transition-all duration-300 group-hover:border-[#F1B5D5]/30 group-hover:bg-[#F1B5D5]/10">
           <ArrowUpRight
             size={18}
             className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
           />
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ import {
 
 export default function ContactSection() {
   return (
-    <section className="px-6 py-28 lg:px-10">
+    <section id="contact" className="scroll-mt-24 px-6 py-28 lg:px-10">
       <div className="group relative mx-auto max-w-7xl overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl transition-all duration-500 hover:border-[#F1B5D5]/20 hover:shadow-[0_30px_80px_rgba(241,181,213,.12)] md:p-14 lg:p-20">
 
         {/* Watermark */}
@@ -55,7 +55,7 @@ export default function ContactSection() {
                 </div>
 
                 <span className="text-lg font-medium text-[#EAE0E2]">
-                  hello@pearl.dev
+                  peculiarken36@gmail.com
                 </span>
               </a>
 
@@ -66,7 +66,7 @@ export default function ContactSection() {
                 </div>
 
                 <span className="text-lg font-medium text-[#EAE0E2]">
-                  Lagos, Nigeria
+                  AkwaIbom, Nigeria
                 </span>
 
               </div>
@@ -119,6 +119,7 @@ export default function ContactSection() {
             </div>
 
             <button
+              type="submit"
               className="group/button flex h-16 w-full items-center justify-center gap-4 rounded-xl bg-[#F1B5D5] font-semibold text-[#161214] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(241,181,213,.35)] active:scale-[0.98]"
             >
               Send Message
