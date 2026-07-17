@@ -144,7 +144,7 @@ export default function ProjectMeta({
               </p>
 
               <p className="mt-2 font-medium">
-                ● In {progress}
+                ● {progress}
               </p>
             </div>
 
