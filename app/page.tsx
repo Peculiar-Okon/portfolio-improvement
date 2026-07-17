@@ -1,47 +1,45 @@
-import Navbar from "@/components/Layout/navbar";
-import Hero from "@/components/sections/hero/hero";
-import Projects from "@/components/sections/projects/Projectsmain";
-import ExpertiseSection from "@/components/sections/techStack/expertiseSection";
-import AboutSection from "@/components/sections/about";
-import ContactSection from "@/components/sections/contacts";
-import Footer from "@/components/sections/footer";
-import WhatSetsMeApart from "@/components/sections/whatSetsMeApart";
-import FadeIn from "@/components/UI/fadein";
+import Navbar from "@/components/navbar";
+import Hero from "@/components/hero";
+import AboutSection from "@/components/about";
+import StackSection from "@/components/stack";
+import FeaturedProjects from "@/components/projects/featuredProjects";
+import ExperienceSection from "@/components/Experience/ExperienceSection";
+import ContactSection from "@/components/contact";
+import Footer from "@/components/footer";
+import SectionWrapper from "@/components/sectionWrapper";
 
 export default function Home() {
   return (
     <>
       <Navbar />
 
-<main>
-  <FadeIn>
-    <Hero />
-  </FadeIn>
+      <main>
+        <SectionWrapper>
+          <Hero />
+        </SectionWrapper>
 
-  <FadeIn delay={0.08}>
-    <AboutSection />
-  </FadeIn>
+        <SectionWrapper>
+          <AboutSection />
+        </SectionWrapper>
 
-  <FadeIn delay={0.08}>
-    <Projects />
-  </FadeIn>
+        <SectionWrapper>
+          <StackSection />
+        </SectionWrapper>
 
-  <FadeIn delay={0.1}>
-    <ExpertiseSection />
-  </FadeIn>
+        <SectionWrapper>
+          <FeaturedProjects />
+        </SectionWrapper>
 
-  <FadeIn delay={0.12}>
-    <WhatSetsMeApart />
-  </FadeIn>
+        <SectionWrapper>
+          <ExperienceSection />
+        </SectionWrapper>
 
-  <FadeIn delay={0.15}>
-    <ContactSection />
-  </FadeIn>
+        <SectionWrapper>
+          <ContactSection />
+        </SectionWrapper>
+      </main>
 
-  <FadeIn delay={0.18}>
-    <Footer />
-  </FadeIn>
-</main>
+      <Footer />
     </>
   );
 }
