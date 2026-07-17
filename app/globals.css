@@ -9,7 +9,7 @@
 }
 
 .card-copy{
-  @apply text-[17px] leading-8 text-[#525252];
+  @apply text-sm leading-6 text-[#525252];
 }
 
 html {

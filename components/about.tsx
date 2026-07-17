@@ -62,7 +62,8 @@ export default function AboutSection() {
               </div>
 
               <div className="mt-4 flex items-center justify-between font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-[0.18em] text-[#7B7B7B] sm:text-[11px]">
-                <span>AKWA IBOM, NIGERIA</span>
+                <span>OVER 20 PROJECTS</span>
+                <span>2+ YEARS</span>
               </div>
             </div>
           </div>
@@ -80,17 +81,15 @@ export default function AboutSection() {
               purpose.
             </h2>
 
-            <div className="mt-8 max-w-2xl space-y-6 text-lg leading-8 text-[#4A4F4D] break-words">
+            <div className="mt-8 max-w-2xl space-y-4 text-base leading-7 text-[#4A4F4D] break-words">
               <p>
-                I'm a full-stack and mobile app developer building software
-                that solves real problems, from intuitive user experiences to
-                reliable backend systems.
+                I bridge the gap between technical infrastructure and flawless user experiences. My engineering philosophy centers on the idea that deep software architecture shouldn't feel heavy to the end user. From engineering decoupled backend microservices with NestJS to building responsive, typed frontend layouts in React and Next.js, I look at every application through the dual lenses of system performance and semantic UX polish.
               </p>
 
+              
+
               <p>
-                I care about creating products that feel simple, scale
-                gracefully and leave people wondering why software can't always
-                be this effortless.
+                I thrive on solving complex, real-world utility problems—whether that means optimizing context windows for AI integrations, implementing bulletproof payment infrastructure, or breaking down monolithic challenges into clean, modular components.
               </p>
             </div>
 

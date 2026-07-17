@@ -83,8 +83,8 @@ export default function TimelineItem({
         className="
           mt-5
           max-w-xl
-          text-[15px]
-          leading-8
+          text-sm
+          leading-6
           text-neutral-600
         "
       >

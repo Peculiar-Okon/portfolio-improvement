@@ -13,13 +13,13 @@ export const projects = [
     color: "#DBEAFE",
 
     description:
-      "An AI-powered Git assistant helping developers understand, manage and automate complex Git workflows.",
+      "Architected a scalable NestJS microservice integrating OpenAI to automate complex Git workflows. Implemented intelligent context-window management and prompt optimizations to minimize token overhead while handling asynchronous parsing of heavy repository payloads.",
 
     progress: "Active Development",
 
     started: "July 2026",
 
-    role: "Solo Developer",
+    role: "Lead Engineer",
 
     github: "https://github.com/Peculiar-Okon/Commit-Mate.git",
 
@@ -47,13 +47,13 @@ export const projects = [
     color: "#D1FAE5",
 
     description:
-      "A university food ecosystem connecting students, kitchens and meal planning into one seamless experience.",
+      "Engineered a cross-platform mobile ecosystem utilizing Flutter and Supabase. Implemented rigid relational database logic, real-time data synchronization, and secure transaction verification via Paystack to ensure absolute consistency during peak high-concurrency order rushes.",
 
     progress: "Completed",
 
-    started: "2026",
+    started: "January 2026",
 
-    role: "Solo Developer",
+    role: "Lead Engineer",
 
     github: "https://github.com/Peculiar-Okon/MealRadar.git",
 
@@ -143,13 +143,13 @@ export const projects = [
     color: "#EDE9FE",
 
     description:
-      "A modern travel booking platform focused on elegant planning and premium user experience.",
+      "Architected a full-stack travel booking platform using React, TypeScript, and Supabase. Engineered complex relational database schemas, real-time availability queries, and secure authentication flows. Focused on performance optimization and a polished, responsive UI across devices.",
 
     progress: "Rebuilding",
 
-    started: "2026",
+    started: "2025",
 
-    role: "Solo Developer",
+    role: "Lead Engineer",
 
     github: "https://github.com/Peculiar-Okon/Skyline_app.git",
 

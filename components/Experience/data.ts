@@ -3,6 +3,6 @@ export const experience = {
   role: "Software Engineering Intern",
   company: "MyServiceAgent",
   description:
-    "Building backend APIs, scalable application features and production-ready systems while learning professional software engineering practices in a collaborative environment.",
+    "Autonomously engineered core backend REST API endpoints using NestJS. Focused on profiling and optimizing slow database queries, improving endpoint performance, and maintaining transactional integrity. Collaborated on implementing scalable system features and testing workflows to ensure production stability.",
 };
 

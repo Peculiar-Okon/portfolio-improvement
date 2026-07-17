@@ -174,10 +174,10 @@ export default function ProjectCard({
             <p
               className="
                 mt-6
-                text-base
-                sm:text-lg
-                leading-7
-                sm:leading-8
+                text-sm
+                sm:text-base
+                leading-6
+                sm:leading-7
                 text-[#5F6368]
                 break-words
               "

@@ -17,7 +17,7 @@ export default function FeaturedProjects() {
               Software I've brought to life.
             </h2>
 
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-[#5F6368]">
+            <p className="mt-5 max-w-2xl text-sm sm:text-base leading-6 sm:leading-7 text-[#5F6368]">
               Every project started with a real problem worth solving.
               Some are finished, some are still evolving, but each one reflects
               how I think about software, systems and product design.

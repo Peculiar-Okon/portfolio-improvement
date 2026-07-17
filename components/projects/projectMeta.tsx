@@ -7,7 +7,7 @@ interface ProjectMetaProps {
   progress: string;
   started: string;
   role: string;
-  github: string; // dummy repo url
+  github: string;
   stack: string[];
 }
 
@@ -24,10 +24,15 @@ export default function ProjectMeta({
   useEffect(() => {
     async function fetchLastUpdated() {
       try {
-        // Replace with your real repo later.
-        const res = await fetch(
-          `https://api.github.com/repos/${github}`
-        );
+        // Parse owner/repo from the full GitHub URL
+        // e.g. "https://github.com/Peculiar-Okon/Commit-Mate.git"
+        const baseUrl = "https://api.github.com/repos/";
+        const repoMatch = github
+          .replace("https://github.com/", "")
+          .replace("http://github.com/", "")
+          .replace(".git", "");
+
+        const res = await fetch(baseUrl + repoMatch);
 
         const data = await res.json();
 
@@ -40,14 +45,9 @@ export default function ProjectMeta({
             (now.getTime() - updated.getTime()) /
             (1000 * 60 * 60 * 24);
 
-          if (diff < 1)
-            setLastUpdated("Today");
-          else if (diff < 2)
-            setLastUpdated("Yesterday");
-          else
-            setLastUpdated(
-              `${Math.floor(diff)} days ago`
-            );
+          if (diff < 1) setLastUpdated("Today");
+          else if (diff < 2) setLastUpdated("Yesterday");
+          else setLastUpdated(Math.floor(diff) + " days ago");
         } else {
           setLastUpdated("Unknown");
         }
@@ -98,39 +98,13 @@ export default function ProjectMeta({
       {/* Overlay */}
 
       <div
-        className={`
-          absolute
-          inset-0
-          z-40
-          flex
-          flex-col
-          justify-between
-          rounded-[32px]
-          border
-          border-black/10
-          bg-gradient-to-br
-          from-white/95
-          via-white/90
-          to-slate-100/90
-          p-8
-          shadow-[0_24px_80px_-28px_rgba(15,23,42,0.45)]
-          backdrop-blur-2xl
-          transition-all
-          duration-500
-
-          md:pointer-events-none
-          md:translate-y-8
-          md:opacity-0
-          md:group-hover:pointer-events-auto
-          md:group-hover:translate-y-0
-          md:group-hover:opacity-100
-
-          ${
-            open
-              ? "pointer-events-auto opacity-100"
-              : "pointer-events-none opacity-0 md:pointer-events-none"
-          }
-        `}
+        className={[
+          "absolute inset-0 z-40 flex flex-col justify-between rounded-[32px] border border-black/10 bg-gradient-to-br from-white/95 via-white/90 to-slate-100/90 p-8 shadow-[0_24px_80px_-28px_rgba(15,23,42,0.45)] backdrop-blur-2xl transition-all duration-500",
+          "md:pointer-events-none md:translate-y-8 md:opacity-0 md:group-hover:pointer-events-auto md:group-hover:translate-y-0 md:group-hover:opacity-100",
+          open
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0 md:pointer-events-none",
+        ].join(" ")}
       >
         {/* Mobile Close */}
 
@@ -159,15 +133,11 @@ export default function ProjectMeta({
         {/* Header */}
 
         <div>
-
           <p className="font-['IBM_Plex_Mono'] text-[11px] uppercase tracking-[0.18em] text-neutral-500">
             Project Information
           </p>
 
-
-
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-
             <div className="rounded-2xl border border-black/10 bg-white/70 p-4 shadow-sm backdrop-blur">
               <p className="text-xs uppercase tracking-widest text-neutral-400">
                 Status
@@ -207,21 +177,17 @@ export default function ProjectMeta({
                 {lastUpdated}
               </p>
             </div>
-
           </div>
-
         </div>
 
         {/* Stack */}
 
         <div>
-
           <p className="mb-3 text-xs uppercase tracking-widest text-neutral-400">
             Tech Stack
           </p>
 
           <div className="flex flex-wrap gap-2">
-
             {stack.map((tech) => (
               <span
                 key={tech}
@@ -238,9 +204,7 @@ export default function ProjectMeta({
                 {tech}
               </span>
             ))}
-
           </div>
-
         </div>
       </div>
     </>

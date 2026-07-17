@@ -137,7 +137,7 @@ export default function Footer() {
             md:justify-between
           "
         >
-          <p>© 2026 Pearl. All rights reserved.</p>
+          <p>© 2026 Peculiar Kenedy. All rights reserved.</p>
 
 
         </div>
