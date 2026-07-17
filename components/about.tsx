@@ -29,11 +29,11 @@ export default function AboutSection() {
         <div className="relative grid items-center gap-10 lg:gap-14 lg:grid-cols-[340px_1fr]">
           {/* Portrait */}
 
-          <div className="relative mx-auto max-w-full overflow-hidden px-2 sm:px-0">
+          <div className="relative mx-auto max-w-full px-2 sm:px-0">
             {/* Flower */}
 
             <svg
-              className="absolute -left-8 -top-9 z-20 h-20 w-20 sm:h-16 sm:w-16"
+              className="absolute -left-6 -top-6 z-20 h-16 w-16"
               viewBox="0 0 100 100"
               fill="none"
             >
@@ -46,12 +46,12 @@ export default function AboutSection() {
 
             {/* Tape */}
 
-            <div className="absolute left-1/2 top-0 z-20 h-8 w-28 -translate-x-1/2 -translate-y-4 rotate-2 rounded-sm bg-white/50 backdrop-blur-sm sm:w-24" />
+            <div className="absolute left-1/2 top-0 z-20 h-8 w-24 -translate-x-1/2 -translate-y-4 rotate-2 rounded-sm bg-white/50 backdrop-blur-sm" />
 
             {/* Postcard */}
 
             <div className="-rotate-2 rounded-[22px] bg-[#FFFDF8] p-3 shadow-[0_30px_60px_rgba(0,0,0,.10)] transition-transform duration-500 hover:-rotate-1 hover:scale-[1.02] max-w-full">
-              <div className="relative aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-2xl sm:max-w-[260px] lg:h-[330px] lg:max-w-[285px]">
+              <div className="relative aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-2xl sm:max-w-[260px] lg:h-[330px] lg:max-w-[285px]">
                 <Image
                   src={MyImage}
                   alt="Portrait of Pearl"
