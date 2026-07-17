@@ -13,7 +13,7 @@ import {
 
 export default function ContactSection() {
   return (
-    <section className="px-5 py-24 sm:px-6 lg:px-8"  id="contact">
+    <section className="px-4 py-16 sm:px-6 lg:px-8"  id="contact">
       <div
         className="
           relative
@@ -22,9 +22,10 @@ export default function ContactSection() {
           border
           border-[#D8D3EC]
           bg-[#EDE9FE]/60
-          p-8
+          p-5
           shadow-[0_30px_80px_rgba(0,0,0,.05)]
           backdrop-blur-md
+          sm:p-8
           lg:p-16
         "
       >
@@ -48,7 +49,7 @@ export default function ContactSection() {
           </svg>
         </div>
 
-        <div className="relative grid gap-20 lg:grid-cols-[1fr_1.1fr]">
+        <div className="relative grid gap-12 lg:gap-20 lg:grid-cols-[1fr_1.1fr]">
           {/* LEFT */}
 
           <div className="flex flex-col justify-center">
@@ -68,10 +69,12 @@ export default function ContactSection() {
               className="
                 mt-5
                 font-['EB_Garamond']
-                text-5xl
+                text-4xl
+                sm:text-5xl
                 leading-tight
                 text-[#1A1C1B]
                 lg:text-6xl
+                break-words
               "
             >
               Let's build
@@ -102,6 +105,7 @@ export default function ContactSection() {
                 text-[17px]
                 leading-8
                 text-neutral-600
+                break-words
               "
             >
               I'm currently open to internships,
@@ -110,7 +114,7 @@ export default function ContactSection() {
               building, I'd love to hear about it.
             </p>
 
-            <div className="mt-12 space-y-6">
+            <div className="mt-10 sm:mt-12 space-y-6">
               <a
                 href="mailto:peculiarken36@gmail.com"
                 className="
@@ -119,6 +123,7 @@ export default function ContactSection() {
                   gap-4
                   transition
                   hover:translate-x-1
+                  break-all
                 "
               >
                 <div
@@ -126,6 +131,7 @@ export default function ContactSection() {
                     flex
                     h-12
                     w-12
+                    shrink-0
                     items-center
                     justify-center
                     rounded-full
@@ -137,7 +143,7 @@ export default function ContactSection() {
                   <Mail size={18} />
                 </div>
 
-                <span className="text-lg text-[#1A1C1B]">
+                <span className="text-lg text-[#1A1C1B] break-all">
                   peculiarken36@gmail.com
                 </span>
               </a>
@@ -176,11 +182,13 @@ export default function ContactSection() {
               border
               border-black/5
               bg-white/45
-              p-8
+              p-6
+              sm:p-8
               backdrop-blur-sm
+              overflow-hidden
             "
           >
-            <div className="space-y-10">
+            <div className="space-y-8 sm:space-y-10">
               <div>
                 <label
                   className="
@@ -209,6 +217,7 @@ export default function ContactSection() {
                     transition
                     placeholder:text-neutral-400
                     focus:border-black
+                    max-w-full
                   "
                 />
               </div>
@@ -233,6 +242,7 @@ export default function ContactSection() {
                     transition
                     placeholder:text-neutral-400
                     focus:border-black
+                    max-w-full
                   "
                 />
               </div>
@@ -257,6 +267,7 @@ export default function ContactSection() {
                     transition
                     placeholder:text-neutral-400
                     focus:border-black
+                    max-w-full
                   "
                 />
               </div>
@@ -282,6 +293,7 @@ export default function ContactSection() {
                     transition
                     placeholder:text-neutral-400
                     focus:border-black
+                    max-w-full
                   "
                 />
               </div>
@@ -290,19 +302,24 @@ export default function ContactSection() {
             <button
               type="submit"
               className="
-                mt-12
+                mt-10
+                sm:mt-12
                 inline-flex
                 items-center
                 gap-3
                 rounded-full
                 bg-[#1A1C1B]
-                px-7
-                py-4
+                px-6
+                py-3.5
+                sm:px-7
+                sm:py-4
                 text-white
                 transition-all
                 duration-300
                 hover:-translate-y-1
                 hover:shadow-xl
+                text-sm
+                sm:text-base
               "
             >
               Send Message

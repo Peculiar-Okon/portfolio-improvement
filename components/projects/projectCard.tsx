@@ -97,7 +97,8 @@ export default function ProjectCard({
           className="
             relative
             overflow-hidden
-            min-h-[350px]
+            min-h-[250px]
+            sm:min-h-[350px]
           "
         >
 
@@ -131,12 +132,14 @@ export default function ProjectCard({
             flex
             flex-col
             justify-between
-            p-10
+            p-6
+            sm:p-10
+            overflow-hidden
           "
         >
 
 
-          <div>
+          <div className="overflow-hidden">
 
 
             <p
@@ -157,8 +160,10 @@ export default function ProjectCard({
               className="
                 mt-3
                 font-['EB_Garamond']
-                text-5xl
+                text-3xl
+                sm:text-5xl
                 text-[#171717]
+                break-words
               "
             >
               {project.title}
@@ -169,9 +174,12 @@ export default function ProjectCard({
             <p
               className="
                 mt-6
-                text-lg
-                leading-8
+                text-base
+                sm:text-lg
+                leading-7
+                sm:leading-8
                 text-[#5F6368]
+                break-words
               "
             >
               {project.description}
@@ -198,9 +206,12 @@ export default function ProjectCard({
                   className="
                     rounded-full
                     bg-white/60
-                    px-4
-                    py-2
-                    text-sm
+                    px-3
+                    py-1.5
+                    text-xs
+                    sm:px-4
+                    sm:py-2
+                    sm:text-sm
                     shadow-sm
                     backdrop-blur
                   "
@@ -226,9 +237,12 @@ export default function ProjectCard({
 
           <div
             className="
-              mt-12
+              mt-8
+              sm:mt-12
               flex
-              gap-4
+              flex-wrap
+              gap-3
+              sm:gap-4
             "
           >
 
@@ -243,8 +257,11 @@ export default function ProjectCard({
                 border
                 border-black/10
                 bg-white
-                px-5
-                py-3
+                px-4
+                py-2.5
+                text-sm
+                sm:px-5
+                sm:py-3
                 transition
                 hover:shadow-md
               "
@@ -268,8 +285,11 @@ export default function ProjectCard({
                 gap-2
                 rounded-full
                 bg-black
-                px-5
-                py-3
+                px-4
+                py-2.5
+                text-sm
+                sm:px-5
+                sm:py-3
                 text-white
                 transition
                 hover:scale-[1.03]

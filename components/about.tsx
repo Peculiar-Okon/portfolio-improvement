@@ -7,7 +7,7 @@ import MyImage from "../assets/images/ChatGPT Image Jul 16, 2026, 07_15_32 PM.pn
 
 export default function AboutSection() {
   return (
-    <section id="about" className="px-6 py-10 lg:px-16">
+    <section id="about" className="px-4 py-10 sm:px-6 lg:px-16">
       <div
         className="
           relative
@@ -15,8 +15,9 @@ export default function AboutSection() {
           rounded-[28px]
           border border-white/50
           bg-[#D1FAE5]
-          p-8
+          p-5
           shadow-[0_24px_60px_rgba(0,0,0,0.05)]
+          sm:p-8
           lg:p-12
         "
       >
@@ -25,10 +26,10 @@ export default function AboutSection() {
 
         <div className="pointer-events-none absolute inset-0 opacity-[0.025] [background-image:radial-gradient(#000_0.6px,transparent_0.6px)] [background-size:18px_18px]" />
 
-        <div className="relative grid items-center gap-14 lg:grid-cols-[340px_1fr]">
+        <div className="relative grid items-center gap-10 lg:gap-14 lg:grid-cols-[340px_1fr]">
           {/* Portrait */}
 
-          <div className="relative mx-auto">
+          <div className="relative mx-auto max-w-full overflow-hidden px-2 sm:px-0">
             {/* Flower */}
 
             <svg
@@ -49,20 +50,19 @@ export default function AboutSection() {
 
             {/* Postcard */}
 
-            <div className="-rotate-2 rounded-[26px] bg-[#FFFDF8] p-4 shadow-[0_30px_60px_rgba(0,0,0,.10)] transition-transform duration-500 hover:-rotate-1 hover:scale-[1.02]">
-              <div className="relative h-[330px] w-[285px] overflow-hidden rounded-2xl">
+            <div className="-rotate-2 rounded-[22px] bg-[#FFFDF8] p-3 shadow-[0_30px_60px_rgba(0,0,0,.10)] transition-transform duration-500 hover:-rotate-1 hover:scale-[1.02] max-w-full">
+              <div className="relative aspect-[4/5] w-full max-w-[220px] overflow-hidden rounded-2xl sm:max-w-[260px] lg:h-[330px] lg:max-w-[285px]">
                 <Image
-                alt="Portrait of Pearl"
-                    src={MyImage}
+                  src={MyImage}
+                  alt="Portrait of Pearl"
                   fill
-                  priority
                   className="object-cover"
+                  priority
                 />
               </div>
 
-              <div className="mt-4 flex items-center justify-between font-['IBM_Plex_Mono'] text-[11px] uppercase tracking-[0.18em] text-[#7B7B7B]">
+              <div className="mt-4 flex items-center justify-between font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-[0.18em] text-[#7B7B7B] sm:text-[11px]">
                 <span>AKWA IBOM, NIGERIA</span>
-
               </div>
             </div>
           </div>
@@ -74,13 +74,13 @@ export default function AboutSection() {
               My Story
             </p>
 
-            <h2 className="mt-6 max-w-lg font-['EB_Garamond'] text-4xl leading-[1.08] tracking-[-0.02em] text-[#1B1B1B] md:text-5xl">
+            <h2 className="mt-6 max-w-lg font-['EB_Garamond'] text-4xl leading-[1.08] tracking-[-0.02em] text-[#1B1B1B] md:text-5xl break-words">
               Software with
               <br />
               purpose.
             </h2>
 
-            <div className="mt-8 max-w-2xl space-y-6 text-lg leading-8 text-[#4A4F4D]">
+            <div className="mt-8 max-w-2xl space-y-6 text-lg leading-8 text-[#4A4F4D] break-words">
               <p>
                 I'm a full-stack and mobile app developer building software
                 that solves real problems, from intuitive user experiences to
