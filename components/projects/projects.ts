@@ -13,7 +13,7 @@ export const projects = [
     color: "#DBEAFE",
 
     description:
-      "Architected a scalable NestJS microservice integrating OpenAI to automate complex Git workflows. Implemented intelligent context-window management and prompt optimizations to minimize token overhead while handling asynchronous parsing of heavy repository payloads.",
+  "An AI-powered Git assistant built with NestJS and OpenAI that helps developers automate commit workflows, understand code changes, and reduce repetitive Git tasks.",
 
     progress: "Active Development",
 
@@ -47,7 +47,7 @@ export const projects = [
     color: "#D1FAE5",
 
     description:
-      "Engineered a cross-platform mobile ecosystem utilizing Flutter and Supabase. Implemented rigid relational database logic, real-time data synchronization, and secure transaction verification via Paystack to ensure absolute consistency during peak high-concurrency order rushes.",
+  "A cross-platform cafeteria app built with Flutter and Supabase that lets students order meals, track availability in real time, and make secure payments.",
 
     progress: "Completed",
 
@@ -142,8 +142,8 @@ export const projects = [
 
     color: "#EDE9FE",
 
-    description:
-      "Architected a full-stack travel booking platform using React, TypeScript, and Supabase. Engineered complex relational database schemas, real-time availability queries, and secure authentication flows. Focused on performance optimization and a polished, responsive UI across devices.",
+description:
+  "Developed a responsive travel booking platform with React and Supabase, making it easy for users to discover, book, and manage trips.",
 
     progress: "Rebuilding",
 

@@ -7,6 +7,8 @@ import ExperienceSection from "@/components/Experience/ExperienceSection";
 import ContactSection from "@/components/contact";
 import Footer from "@/components/footer";
 import SectionWrapper from "@/components/sectionWrapper";
+import HeroStats from "@/components/heroStats";
+import WhatIBuild from "@/components/services/whatIbuild";
 
 export default function Home() {
   return (
@@ -19,7 +21,15 @@ export default function Home() {
         </SectionWrapper>
 
         <SectionWrapper>
+          <HeroStats />
+        </SectionWrapper>
+
+        <SectionWrapper>
           <AboutSection />
+        </SectionWrapper>
+
+        <SectionWrapper>
+          <WhatIBuild />
         </SectionWrapper>
 
         <SectionWrapper>

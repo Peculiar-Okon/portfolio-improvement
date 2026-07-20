@@ -50,8 +50,8 @@ export default function AboutSection() {
 
             {/* Postcard */}
 
-            <div className="-rotate-2 rounded-[22px] bg-[#FFFDF8] p-3 shadow-[0_30px_60px_rgba(0,0,0,.10)] transition-transform duration-500 hover:-rotate-1 hover:scale-[1.02] max-w-full">
-              <div className="relative aspect-[4/5] w-full max-w-[320px] overflow-hidden rounded-2xl sm:max-w-[260px] lg:h-[330px] lg:max-w-[285px]">
+            <div className="-rotate-2 rounded-[22px] bg-[#FFFDF8] p-3 shadow-[0_30px_60px_rgba(0,0,0,.10)] transition-transform duration-500 hover:-rotate-1 hover:scale-[1.02] w-[270px] sm:w-auto sm:max-w-full">
+              <div className="relative aspect-[4/5] w-full max-w-[270px] overflow-hidden rounded-2xl sm:max-w-[260px] lg:h-[330px] lg:max-w-[285px]">
                 <Image
                   src={MyImage}
                   alt="Portrait of Pearl"
@@ -61,9 +61,9 @@ export default function AboutSection() {
                 />
               </div>
 
-              <div className="mt-4 flex items-center justify-between font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-[0.18em] text-[#7B7B7B] sm:text-[11px]">
-                <span>OVER 20 PROJECTS</span>
-                <span>2+ YEARS</span>
+              <div className="mt-4 flex items-center justify-between gap-x-6 font-['IBM_Plex_Mono'] text-[10px] uppercase tracking-[0.18em] text-[#7B7B7B] sm:text-[11px]">
+                <span>AKWAIBOM</span>
+                <span>NIGERIA</span>
               </div>
             </div>
           </div>
@@ -83,13 +83,15 @@ export default function AboutSection() {
 
             <div className="mt-8 max-w-2xl space-y-4 text-base leading-7 text-[#4A4F4D] break-words">
               <p>
-                I bridge the gap between technical infrastructure and flawless user experiences. My engineering philosophy centers on the idea that deep software architecture shouldn't feel heavy to the end user. From engineering decoupled backend microservices with NestJS to building responsive, typed frontend layouts in React and Next.js, I look at every application through the dual lenses of system performance and semantic UX polish.
+                I build software that turns complex ideas into experiences that feel
+                simple. Whether it's a web platform, mobile app, or AI-powered workflow,
+                I'm driven by solving real problems with thoughtful engineering.
               </p>
 
-              
-
               <p>
-                I thrive on solving complex, real-world utility problems—whether that means optimizing context windows for AI integrations, implementing bulletproof payment infrastructure, or breaking down monolithic challenges into clean, modular components.
+                I work across the full stack with React, Next.js, Flutter, NestJS, and
+                TypeScript, building products that are intuitive to use, reliable behind
+                the scenes, and designed to grow.
               </p>
             </div>
 

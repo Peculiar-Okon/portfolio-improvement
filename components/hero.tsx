@@ -3,9 +3,11 @@
 import Link from "next/link";
 import {
   ArrowDown,
-  GitBranchIcon,
+  ArrowRight,
   Mail,
 } from "lucide-react";
+
+import { RiGithubFill } from "react-icons/ri";
 
 export default function Hero() {
   return (
@@ -51,7 +53,138 @@ export default function Hero() {
 
         {/* Buttons */}
 
-        <div className="mt-12 flex flex-wrap gap-4">
+        <div className="mt-12 flex flex-wrap items-center gap-4">
+  {/* Primary CTA */}
+
+  <Link
+    href="#projects"
+    className="
+      group
+      inline-flex
+      items-center
+      gap-3
+      rounded-full
+      bg-[#171717]
+      px-8
+      py-4
+      text-[15px]
+      font-medium
+      text-white
+      shadow-[0_12px_30px_rgba(0,0,0,.16)]
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:bg-black
+      hover:shadow-[0_18px_40px_rgba(0,0,0,.22)]
+    "
+  >
+    View Projects
+
+    <ArrowRight
+      size={18}
+      className="transition-transform duration-300 group-hover:translate-x-1"
+    />
+  </Link>
+
+  {/* Secondary CTA */}
+
+  <Link
+    href="#contact"
+    className="
+      group
+      inline-flex
+      items-center
+      gap-3
+      rounded-full
+      border
+      border-[#D8D8D5]
+      bg-[#FFFDF8]/90
+      px-8
+      py-4
+      text-[15px]
+      font-medium
+      text-[#171717]
+      backdrop-blur-sm
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:border-black/15
+      hover:bg-white
+      hover:shadow-lg
+    "
+  >
+    Let's Talk
+
+    <Mail
+      size={18}
+      className="transition-transform duration-300 group-hover:-rotate-12"
+    />
+  </Link>
+
+  {/* GitHub */}
+
+  <Link
+    href="https://github.com/Peculiar-Okon"
+    target="_blank"
+    className="
+      group
+      flex
+      h-14
+      w-14
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-[#D8D8D5]
+      bg-white/70
+      backdrop-blur-sm
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:rotate-6
+      hover:bg-white
+      hover:shadow-lg
+    "
+  >
+    <RiGithubFill
+      size={20}
+      className="transition-transform duration-300 group-hover:scale-110"
+    />
+  </Link>
+
+  {/* Resume */}
+
+  <Link
+    href="/resume.pdf"
+    target="_blank"
+    className="
+      group
+      flex
+      h-14
+      w-14
+      items-center
+      justify-center
+      rounded-full
+      border
+      border-[#D8D8D5]
+      bg-white/70
+      backdrop-blur-sm
+      transition-all
+      duration-300
+      hover:-translate-y-1
+      hover:rotate-6
+      hover:bg-white
+      hover:shadow-lg
+    "
+  >
+    <ArrowDown
+      size={20}
+      className="transition-transform duration-300 group-hover:translate-y-1"
+    />
+  </Link>
+</div>
+
+        {/* <div className="mt-12 flex flex-wrap gap-4">
 
           <Link
             href="#contact"
@@ -78,7 +211,7 @@ export default function Hero() {
             <ArrowDown size={18} />
           </Link>
 
-        </div>
+        </div> */}
 
       </div>
 
