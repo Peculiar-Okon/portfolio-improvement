@@ -9,7 +9,7 @@ export default function Experience() {
         Experience
       </h2>
 
-      <div className="border-l border-[#CFC4BD] pl-10">
+      <div className="relative border-l border-[#CFC4BD] pl-8 sm:pl-10">
         <ExperienceCard {...experience} />
       </div>
 

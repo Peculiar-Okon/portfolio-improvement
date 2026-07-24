@@ -47,7 +47,8 @@ export default function ProjectCard({
       className={`
         grid
         items-center
-        gap-20
+        gap-12
+        lg:gap-20
         lg:grid-cols-2
         ${reverse ? "lg:[&>*:first-child]:order-2" : ""}
       `}
@@ -58,15 +59,15 @@ export default function ProjectCard({
       />
 
       <div>
-        <p className="font-['IBM_Plex_Sans'] text-[12px] uppercase tracking-[0.22em] text-[#B96A48]">
+        <p className="font-sans text-[11px] uppercase tracking-[0.22em] text-[#B96A48] sm:text-[12px]">
           {project.category}
         </p>
 
-        <h3 className="mt-4 font-['EB_Garamond'] text-5xl leading-none text-[#262321]">
+        <h3 className="mt-3 sm:mt-4 font-serif text-3xl leading-none text-[#262321] sm:text-4xl lg:text-5xl">
           {project.title}
         </h3>
 
-        <p className="mt-8 text-lg leading-9 text-[#66615C]">
+        <p className="mt-6 sm:mt-8 text-base leading-8 text-[#66615C] sm:text-lg sm:leading-9">
           {project.description}
         </p>
 
@@ -75,7 +76,7 @@ export default function ProjectCard({
           stack={project.stack}
         />
 
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-8 sm:mt-10 flex flex-wrap gap-4">
           <Button
             href={project.demo}
             variant="primary"

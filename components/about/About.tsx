@@ -26,7 +26,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-[#F2ECE5] py-28 md:py-36"
+      className="bg-[#F2ECE5] py-20 md:py-36"
     >
       <Container>
         {/* Header */}
@@ -36,20 +36,20 @@ export default function About() {
           whileInView="show"
           viewport={{ once: true }}
           variants={fadeUp}
-          className="flex flex-col gap-6 border-b border-[#DDD3CB] pb-8 md:flex-row md:items-end md:justify-between"
+          className="flex flex-col gap-4 border-b border-[#DDD3CB] pb-8 md:flex-row md:items-end md:justify-between"
         >
-          <h2 className="font-['EB_Garamond'] text-4xl text-[#262321] md:text-5xl">
+          <h2 className="font-serif text-3xl text-[#262321] md:text-5xl">
             {about.heading}
           </h2>
 
-          <p className="font-['IBM_Plex_Sans'] text-[12px] uppercase tracking-[0.22em] text-[#7A706A]">
+          <p className="font-sans text-[11px] uppercase tracking-[0.22em] text-[#7A706A]">
             {about.sectionLabel}
           </p>
         </motion.div>
 
         {/* Content */}
 
-        <div className="mt-20 grid gap-20 lg:grid-cols-[1.25fr_.75fr]">
+        <div className="mt-16 md:mt-20 grid gap-16 lg:grid-cols-[1.25fr_.75fr]">
           {/* Left */}
 
           <div>
@@ -58,12 +58,12 @@ export default function About() {
               whileInView="show"
               viewport={{ once: true }}
               variants={fadeUp}
-              className="font-['IBM_Plex_Sans'] text-[11px] uppercase tracking-[0.3em] text-[#B96A48]"
+              className="font-sans text-[10px] uppercase tracking-[0.3em] text-[#B96A48] sm:text-[11px]"
             >
               {about.label}
             </motion.p>
 
-            <div className="mt-10 space-y-8">
+            <div className="mt-8 space-y-6 sm:mt-10 sm:space-y-8">
               {about.paragraphs.map((paragraph, index) => (
                 <motion.p
                   key={index}
@@ -86,9 +86,11 @@ export default function About() {
                   }}
                   className="
                     max-w-2xl
-                    text-[18px]
-                    leading-[1.9]
+                    text-[16px]
+                    leading-[1.8]
                     text-[#4D4540]
+                    sm:text-[18px]
+                    sm:leading-[1.9]
                   "
                 >
                   {paragraph}
@@ -99,7 +101,7 @@ export default function About() {
 
           {/* Right */}
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-1">
+          <div className="grid gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-1">
             {aboutCards.map((card) => (
               <AboutCard
                 key={card.label}

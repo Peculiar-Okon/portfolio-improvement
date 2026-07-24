@@ -28,7 +28,7 @@ export default function Button({
   const classes = cn(
     "group inline-flex items-center gap-2 rounded-full transition-all duration-300",
 
-    "font-['IBM_Plex_Sans'] text-[13px] font-medium uppercase tracking-[0.18em]",
+    "font-sans text-[13px] font-medium uppercase tracking-[0.18em]",
 
     variant === "primary" &&
       "bg-[#B96A48] px-6 py-3 text-[#FDF8F7] hover:-translate-y-0.5 hover:bg-[#a95d3d] shadow-sm",

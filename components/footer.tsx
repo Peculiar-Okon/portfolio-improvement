@@ -13,32 +13,17 @@ export default function Footer() {
 
   return (
     <motion.footer
-        initial={{
-        opacity: 0,
-        y: 80,
-        clipPath: "inset(20% 0 0 0)",
-    }}
-    whileInView={{
-        opacity: 1,
-        y: 0,
-        clipPath: "inset(0% 0 0 0)",
-    }}
-    viewport={{ once: true, amount: .15 }}
-    transition={{
-        duration: 1,
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{
+        duration: 0.8,
         ease: [0.22, 1, 0.36, 1],
-    }}
-      // initial={{ opacity: 0, y: 60 }}
-      // whileInView={{ opacity: 1, y: 0 }}
-      // viewport={{ once: true, amount: 0.2 }}
-      // transition={{
-      //   duration: 0.8,
-      //   ease: [0.22, 1, 0.36, 1],
-      // }}
+      }}
       className="border-t border-[#CFC4BD] bg-[#F7F3F1]"
     >
-      <div className="mx-auto max-w-7xl px-6 py-14 sm:px-10 lg:px-16 xl:px-24">
-        <div className="flex flex-col gap-12 md:flex-row md:items-end md:justify-between">
+      <div className="mx-auto max-w-7xl px-6 py-12 sm:px-10 sm:py-14 lg:px-16 xl:px-24">
+        <div className="flex flex-col gap-10 sm:gap-12 md:flex-row md:items-end md:justify-between">
           {/* Left */}
 
           <motion.div
@@ -56,22 +41,22 @@ export default function Footer() {
                 letterSpacing: ".03em",
               }}
               transition={{ duration: 0.3 }}
-              className="font-serif text-4xl text-[#100E0C]"
+              className="font-serif text-3xl text-[#100E0C] sm:text-4xl"
             >
-              Peculiar.
+              Pearl.
             </motion.h2>
 
-            <p className="mt-5 max-w-md text-[17px] leading-8 text-[#4D4540]">
+            <p className="mt-4 sm:mt-5 max-w-md text-[15px] leading-7 text-[#4D4540] sm:text-[17px] sm:leading-8">
               Thoughtfully engineered software.
-              Solving real world problems.
+              Quietly solving real problems.
             </p>
 
-            <p className="mt-8 text-xs uppercase tracking-[0.18em] text-[#7E756F]">
+            <p className="mt-6 sm:mt-8 text-[10px] uppercase tracking-[0.18em] text-[#7E756F] sm:text-xs">
               Built with Next.js • Tailwind CSS • Framer Motion
             </p>
 
-            <p className="mt-4 text-xs uppercase tracking-[0.14em] text-[#7E756F]/80">
-              © {new Date().getFullYear()} Peculiar Okon. All rights reserved.
+            <p className="mt-3 sm:mt-4 text-[10px] uppercase tracking-[0.14em] text-[#7E756F]/80 sm:text-xs">
+              © {new Date().getFullYear()} Pearl Okon. All rights reserved.
             </p>
           </motion.div>
 

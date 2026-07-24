@@ -38,7 +38,7 @@ export default function WhatIBuild() {
         border-y
         border-[#DED4CC]
         bg-[#F7F3F1]
-        py-24
+        py-20
         lg:py-36
       "
     >
@@ -50,13 +50,13 @@ export default function WhatIBuild() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mb-20"
+          className="mb-16 sm:mb-20"
         >
-          <p className="font-['IBM_Plex_Sans'] text-[12px] font-semibold uppercase tracking-[0.25em] text-[#B96A48]">
+          <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.25em] text-[#B96A48] sm:text-[12px]">
             CAPABILITIES
           </p>
 
-          <h2 className="mt-5 max-w-xl font-['EB_Garamond'] text-5xl leading-none text-[#1D1A18] md:text-6xl">
+          <h2 className="mt-4 sm:mt-5 max-w-xl font-serif text-4xl leading-none text-[#1D1A18] sm:text-5xl md:text-6xl">
             Areas of Expertise
           </h2>
         </motion.div>
@@ -68,7 +68,7 @@ export default function WhatIBuild() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="grid gap-14 md:grid-cols-2 xl:grid-cols-4"
+          className="grid gap-12 sm:gap-14 md:grid-cols-2 xl:grid-cols-4"
         >
           {whatIBuild.map((itemData) => (
             <motion.article
@@ -85,21 +85,21 @@ export default function WhatIBuild() {
               {/* Top line */}
 
               <motion.div
-                className="mb-6 h-[2px] w-10 rounded-full bg-[#B96A48]"
+                className="mb-5 sm:mb-6 h-[2px] w-10 rounded-full bg-[#B96A48]"
                 whileHover={{
                   width: 64,
                 }}
               />
 
-              <p className="font-['IBM_Plex_Sans'] text-[12px] font-semibold uppercase tracking-[0.2em] text-[#B96A48]">
+              <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-[#B96A48] sm:text-[12px]">
                 {itemData.number}
               </p>
 
-              <h3 className="mt-4 font-['EB_Garamond'] text-[2rem] leading-none text-[#1F1C1A]">
+              <h3 className="mt-3 sm:mt-4 font-serif text-[1.6rem] leading-none text-[#1F1C1A] sm:text-[2rem]">
                 {itemData.title}
               </h3>
 
-              <p className="mt-6 leading-8 text-[#5B544F]">
+              <p className="mt-5 sm:mt-6 leading-8 text-[#5B544F]">
                 {itemData.description}
               </p>
             </motion.article>

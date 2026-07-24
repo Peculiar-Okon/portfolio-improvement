@@ -31,20 +31,20 @@ export default function Navbar() {
       <header
         className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "h-[92px] border-b border-[#E4DDD5] bg-[#F7F3ED]/90 backdrop-blur-md"
-            : "h-[120px]"
+            ? "h-[72px] sm:h-[92px] border-b border-[#E4DDD5] bg-[#F7F3ED]/90 backdrop-blur-md"
+            : "h-[88px] sm:h-[120px]"
         }`}
       >
-        <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 lg:px-10">
+        <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-10">
           {/* Brand */}
 
           <Link href="/" className="group">
             <div className="space-y-1">
-              <h2 className="font-serif text-[28px] leading-none tracking-[-0.02em] text-[#262321] transition-colors duration-300 group-hover:text-[#B96A48]">
+              <h2 className="font-serif text-[22px] leading-none tracking-[-0.02em] text-[#262321] transition-colors duration-300 group-hover:text-[#B96A48] sm:text-[28px]">
                 Peculiar Kenedy
               </h2>
 
-              <p className="font-['IBM_Plex_Sans'] text-[10px] uppercase tracking-[0.22em] text-[#7C746D] transition-all duration-300 group-hover:text-[#262321]">
+              <p className="font-sans text-[9px] uppercase tracking-[0.22em] text-[#7C746D] transition-all duration-300 group-hover:text-[#262321] sm:text-[10px]">
                 Software Engineer
               </p>
             </div>
@@ -57,7 +57,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="group relative font-['IBM_Plex_Sans'] text-[12px] font-medium uppercase tracking-[0.18em] text-[#4D4540]"
+                className="group relative font-sans text-[12px] font-medium uppercase tracking-[0.18em] text-[#4D4540]"
               >
                 {item.name}
 
@@ -70,7 +70,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setOpen(!open)}
-            className="relative flex h-12 w-12 items-center justify-center lg:hidden"
+            className="relative flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center lg:hidden"
           >
             <div className="relative h-5 w-7">
               <motion.span
@@ -135,9 +135,9 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -25 }}
             transition={{ duration: 0.45 }}
-            className="fixed left-0 right-0 top-[88px] z-40 border-b border-[#E4DDD5] bg-[#F7F3ED]/95 backdrop-blur-md lg:hidden"
+            className="fixed left-0 right-0 top-[68px] sm:top-[88px] z-40 border-b border-[#E4DDD5] bg-[#F7F3ED]/95 backdrop-blur-md lg:hidden"
           >
-            <div className="mx-auto flex max-w-7xl flex-col px-8 py-10">
+            <div className="mx-auto flex max-w-7xl flex-col px-6 sm:px-8 py-8 sm:py-10">
               {navLinks.map((item, i) => (
                 <motion.div
                   key={item.name}
@@ -150,13 +150,13 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="group flex items-center justify-between border-b border-[#ECE6DF] py-6"
+                    className="group flex items-center justify-between border-b border-[#ECE6DF] py-5 sm:py-6"
                   >
-                    <span className="font-serif text-3xl text-[#262321] transition-colors duration-300 group-hover:text-[#B96A48]">
+                    <span className="font-serif text-2xl text-[#262321] transition-colors duration-300 group-hover:text-[#B96A48] sm:text-3xl">
                       {item.name}
                     </span>
 
-                    <span className="font-['IBM_Plex_Sans'] text-[11px] uppercase tracking-[0.18em] text-[#7C746D]">
+                    <span className="font-sans text-[10px] uppercase tracking-[0.18em] text-[#7C746D] sm:text-[11px]">
                       0{i + 1}
                     </span>
                   </Link>

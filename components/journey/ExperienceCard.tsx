@@ -17,18 +17,19 @@ export default function ExperienceCard({
 }: Props) {
   return (
     <motion.div
-      className="relative"
+      className="relative pl-8 sm:pl-10"
       initial={{ opacity: 0, x: -20 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
     >
-      <span className="absolute -left-[56px] top-2 h-3 w-3 rounded-full bg-[#924B2B]" />
+      {/* Timeline dot — positioned to align with the border line */}
+      <span className="absolute -left-[13px] top-2 h-3 w-3 rounded-full border-2 border-[#924B2B] bg-[#F7F3F1]" />
 
       <p className="mb-2 text-xs uppercase tracking-[0.18em] text-[#924B2B]">
         {period}
       </p>
 
-      <h3 className="font-['IBM_Plex_Sans'] text-xl font-semibold text-[#100E0C]">
+      <h3 className="font-sans text-xl font-semibold text-[#100E0C]">
         {role}
       </h3>
 

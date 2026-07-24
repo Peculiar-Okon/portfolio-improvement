@@ -6,23 +6,23 @@ import Button from "./ui/button";
 const contacts = [
   {
     label: "Email",
-    value: "peculiarken36@gmail.com",
-    href: "mailto:peculiarken36@gmail.com",
+    value: "hello@pearl.dev",
+    href: "mailto:hello@pearl.dev",
   },
   {
     label: "GitHub",
-    value: "Peculiar-Okon",
-    href: "https://github.com/Peculiar-Okon",
+    value: "github.com/yourname",
+    href: "https://github.com/yourname",
   },
   {
     label: "LinkedIn",
-    value: "Peculiar Kenedy",
-    href: "https://linkedin.com/in/peculiar-kenedy-b94903329",
+    value: "linkedin.com/in/yourname",
+    href: "https://linkedin.com/in/yourname",
   },
   {
     label: "X",
-    value: "@Pearl_thee_dev",
-    href: "https://x.com/Pearl_thee_dev",
+    value: "@yourhandle",
+    href: "https://x.com/yourhandle",
   },
   {
     label: "Location",
@@ -38,11 +38,10 @@ export default function Contact() {
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.8 }}
       className="border border-[#CFC4BD] bg-[#FDF8F7]"
-      id="contact"
     >
-      <div className="mx-auto max-w-7xl px-6 py-20 sm:px-10 lg:px-16 xl:px-24">
+      <div className="mx-auto max-w-7xl px-6 py-16 sm:px-10 sm:py-20 lg:px-16 xl:px-24">
 
-        <div className="grid gap-24 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid gap-16 lg:gap-24 lg:grid-cols-[0.9fr_1.1fr]">
 
           {/* LEFT */}
 
@@ -54,11 +53,11 @@ export default function Contact() {
             className="max-w-md"
           >
 
-            <p className="mb-6 text-xs uppercase tracking-[0.25em] text-[#924B2B]">
+            <p className="mb-4 sm:mb-6 text-xs uppercase tracking-[0.25em] text-[#924B2B]">
               READY FOR NEW CHALLENGES
             </p>
 
-            <h2 className="font-serif text-5xl leading-[1.15] tracking-[-0.03em] text-[#100E0C] md:text-6xl">
+            <h2 className="font-serif text-4xl leading-[1.15] tracking-[-0.03em] text-[#100E0C] sm:text-5xl md:text-6xl">
               Let's build
               <br />
               something worth
@@ -72,7 +71,7 @@ export default function Contact() {
               </motion.span>
             </h2>
 
-            <p className="mt-8 text-lg leading-9 text-[#4D4540]">
+            <p className="mt-6 sm:mt-8 text-base leading-8 text-[#4D4540] sm:text-lg sm:leading-9">
               Every great product starts with a conversation.
               Whether you're launching your first startup,
               modernizing an existing business,
@@ -80,7 +79,7 @@ export default function Contact() {
               I'd love to help turn ambitious ideas into products people genuinely enjoy using.
             </p>
 
-            <div className="mt-14 border-t border-[#CFC4BD]">
+            <div className="mt-10 sm:mt-14 border-t border-[#CFC4BD]">
 
               {contacts.map((item, index) => (
 
@@ -89,10 +88,10 @@ export default function Contact() {
                   initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: .2 + index * .08 }}
-                  className="flex items-center justify-between border-b border-[#CFC4BD] py-5"
+                  className="flex items-center justify-between border-b border-[#CFC4BD] py-4 sm:py-5"
                 >
 
-                  <span className="text-[11px] uppercase tracking-[0.18em] text-[#7E756F]">
+                  <span className="text-[10px] uppercase tracking-[0.18em] text-[#7E756F] sm:text-[11px]">
                     {item.label}
                   </span>
 
@@ -108,7 +107,7 @@ export default function Contact() {
                       {item.value}
                     </Button>
                   ) : (
-                    <span className="text-[#100E0C]">
+                    <span className="text-[#100E0C] text-sm">
                       {item.value}
                     </span>
                   )}
@@ -118,7 +117,7 @@ export default function Contact() {
 
             </div>
 
-            <div className="mt-10">
+            <div className="mt-8 sm:mt-10">
               <Button
                 href="/resume.pdf"
                 variant="text"
@@ -137,10 +136,10 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: .25, duration: .8 }}
-            className="space-y-7"
+            className="space-y-6 sm:space-y-7"
           >
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="grid gap-5 sm:gap-6 md:grid-cols-2">
 
               <Input
                 label="Name"
@@ -181,12 +180,17 @@ export default function Contact() {
                 damping: 24,
               }}
               className="
+                w-full
+                sm:w-auto
                 bg-[#100E0C]
                 px-10
                 py-4
                 uppercase
                 tracking-[0.18em]
                 text-[#FDF8F7]
+                font-sans
+                text-[13px]
+                font-medium
               "
             >
               Send Message
@@ -208,19 +212,23 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
 export function Input({ label, ...props }: Props) {
   return (
     <div>
-      <label className="mb-2 block text-[11px] uppercase tracking-[0.18em] text-[#7E756F]">
+      <label className="mb-2 block text-[10px] uppercase tracking-[0.18em] text-[#7E756F] sm:text-[11px]">
         {label}
       </label>
 
       <input
         {...props}
         className="
-          h-14
+          h-12
+          sm:h-14
           w-full
           border
           border-[#CFC4BD]
           bg-[#F7F3F1]
-          px-5
+          px-4
+          sm:px-5
+          text-sm
+          sm:text-base
           transition-all
           duration-300
           outline-none
@@ -243,7 +251,7 @@ interface TextareaProps
 export function Textarea({ label, ...props }: TextareaProps) {
   return (
     <div>
-      <label className="mb-2 block text-[11px] uppercase tracking-[0.18em] text-[#7E756F]">
+      <label className="mb-2 block text-[10px] uppercase tracking-[0.18em] text-[#7E756F] sm:text-[11px]">
         {label}
       </label>
 
@@ -255,8 +263,10 @@ export function Textarea({ label, ...props }: TextareaProps) {
           border
           border-[#CFC4BD]
           bg-[#F7F3F1]
-          p-5
-          text-base
+          p-4
+          sm:p-5
+          text-sm
+          sm:text-base
           leading-7
           text-[#100E0C]
           placeholder:text-[#6B7280]
