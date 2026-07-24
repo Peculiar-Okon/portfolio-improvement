@@ -3,18 +3,22 @@
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
-interface SectionWrapperProps {
+interface RevealProps {
   children: ReactNode;
+  delay?: number;
+  className?: string;
 }
 
-export default function SectionWrapper({
+export default function Reveal({
   children,
-}: SectionWrapperProps) {
+  delay = 0,
+  className,
+}: RevealProps) {
   return (
-    <motion.section
+    <motion.div
       initial={{
         opacity: 0,
-        y: 40,
+        y: 28,
       }}
       whileInView={{
         opacity: 1,
@@ -22,14 +26,16 @@ export default function SectionWrapper({
       }}
       viewport={{
         once: true,
-        amount: 0.2,
+        amount: 0.25,
       }}
       transition={{
-        duration: 0.7,
+        duration: 0.8,
+        delay,
         ease: [0.22, 1, 0.36, 1],
       }}
+      className={className}
     >
       {children}
-    </motion.section>
+    </motion.div>
   );
 }

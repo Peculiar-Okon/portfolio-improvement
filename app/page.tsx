@@ -1,14 +1,11 @@
 import Navbar from "@/components/navbar";
-import Hero from "@/components/hero";
-import AboutSection from "@/components/about";
-import StackSection from "@/components/stack";
-import FeaturedProjects from "@/components/projects/featuredProjects";
-import ExperienceSection from "@/components/Experience/ExperienceSection";
-import ContactSection from "@/components/contact";
+import Hero from "@/components/sections/hero";
+import About from "@/components/about/About";
+import Projects from "@/components/projects/Project";
+import WhatIBuild from "@/components/what-i-build/whatibuildmain";
+import Journey from "@/components/journey/Journey";
+import Contact from "@/components/contacts";
 import Footer from "@/components/footer";
-import SectionWrapper from "@/components/sectionWrapper";
-import HeroStats from "@/components/heroStats";
-import WhatIBuild from "@/components/services/whatIbuild";
 
 export default function Home() {
   return (
@@ -16,39 +13,14 @@ export default function Home() {
       <Navbar />
 
       <main>
-        <SectionWrapper>
-          <Hero />
-        </SectionWrapper>
+      <Hero />
+      <About />
+      <Projects />
+      <WhatIBuild />
+      <Journey />
+      <Contact />
 
-        <SectionWrapper>
-          <HeroStats />
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <AboutSection />
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <WhatIBuild />
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <StackSection />
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <FeaturedProjects />
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <ExperienceSection />
-        </SectionWrapper>
-
-        <SectionWrapper>
-          <ContactSection />
-        </SectionWrapper>
       </main>
-
       <Footer />
     </>
   );

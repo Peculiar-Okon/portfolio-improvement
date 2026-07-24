@@ -1,167 +1,68 @@
-import MealRadar from "../../assets/images/ChatGPT Image Jul 16, 2026, 05_07_26 PM.png"
-import Skyline from "../../assets/images/ChatGPT Image Jul 16, 2026, 05_12_23 PM.png"
-import CommitMate from "../../assets/images/ChatGPT Image Jul 16, 2026, 05_17_20 PM.png"
+import CommitMate from "@/assets/images/ChatGPT Image Jul 16, 2026, 05_17_20 PM.png";
+import MealRadar from "@/assets/images/ChatGPT Image Jul 16, 2026, 05_07_26 PM.png";
+import Skyline from "@/assets/images/ChatGPT Image Jul 16, 2026, 05_12_23 PM.png";
 
 export const projects = [
   {
     id: 1,
 
+    category: "Developer Tools",
+
     title: "CommitMate",
+
+    description:
+      "An AI-powered Git assistant that understands code changes, generates meaningful commits, explains diffs, and streamlines the entire Git workflow directly inside VS Code.",
 
     image: CommitMate,
 
-    color: "#DBEAFE",
+    impact: "AI-powered Git workflows",
 
-    description:
-  "An AI-powered Git assistant built with NestJS and OpenAI that helps developers automate commit workflows, understand code changes, and reduce repetitive Git tasks.",
-
-    progress: "Active Development",
-
-    started: "July 2026",
-
-    role: "Lead Engineer",
+    stack: "NestJS • OpenAI • VS Code API • TypeScript • React • PostgreSQL",
 
     github: "https://github.com/Peculiar-Okon/Commit-Mate.git",
 
-    live: "#",
-
-    featured: true,
-
-    stack: [
-      "NestJS",
-      "React",
-      "TypeScript",
-      "OpenAI",
-      "VS Code API",
-      "PostgreSQL",
-    ],
+    demo: "...",
   },
 
   {
     id: 2,
 
+    category: "Mobile Development",
+
     title: "MealRadar",
+
+    description:
+      "A Flutter application built for university cafeterias, enabling meal discovery, ordering, role-based management, payment verification, and delivery workflows.",
 
     image: MealRadar,
 
-    color: "#D1FAE5",
+    impact: "Students • Staff • Cafeterias",
 
-    description:
-  "A cross-platform cafeteria app built with Flutter and Supabase that lets students order meals, track availability in real time, and make secure payments.",
-
-    progress: "Completed",
-
-    started: "January 2026",
-
-    role: "Lead Engineer",
+    stack: "Flutter • Supabase • Typescript",
 
     github: "https://github.com/Peculiar-Okon/MealRadar.git",
 
-    live: "#",
-
-    featured: true,
-
-    stack: [
-      "Flutter",
-      "Paystack",
-      "Supabase",
-      "Typescript",
-    ],
+    demo: "...",
   },
 
-  /*
   {
     id: 3,
 
-    title: "DotOrg",
-
-    image: "/projects/dotorg.png",
-
-    color: "#FEF3C7",
-
-    description:
-      "A digital decluttering platform that intelligently organizes, surfaces and manages forgotten files.",
-
-    progress: "Planning",
-
-    started: "2026",
-
-    role: "Solo Developer",
-
-    github: "yourusername/dotorg",
-
-    live: "#",
-
-    featured: true,
-
-    stack: [
-      "Flutter",
-      "Supabase",
-      "AI",
-    ],
-  },
-
-  {
-    id: 4,
-
-    title: "Foundry",
-
-    image: "/projects/foundry.png",
-
-    color: "#FCE7F3",
-
-    description:
-      "Restaurant operations software for inventory, staff, orders and business insights.",
-
-    progress: "Planning",
-
-    started: "2026",
-
-    role: "Solo Developer",
-
-    github: "yourusername/foundry",
-
-    live: "#",
-
-    featured: true,
-
-    stack: [
-      "Flutter",
-      "Node.js",
-      "PostgreSQL",
-    ],
-  },
-  */
-
-  {
-    id: 5,
+    category: "Travel Platform",
 
     title: "Skyline",
 
+    description:
+      "A modern travel booking experience focused on elegant UI, destination discovery, responsive design, and scalable frontend architecture.",
+
     image: Skyline,
 
-    color: "#EDE9FE",
+    impact: "Premium travel experience",
 
-description:
-  "Developed a responsive travel booking platform with React and Supabase, making it easy for users to discover, book, and manage trips.",
-
-    progress: "Rebuilding",
-
-    started: "2025",
-
-    role: "Lead Engineer",
+    stack: "Vite • React • TypeScript • Tailwind",
 
     github: "https://github.com/Peculiar-Okon/Skyline_app.git",
 
-    live: "#",
-
-    featured: true,
-
-    stack: [
-      "React",
-      "TypeScript",
-      "Tailwind",
-      "Supabase",
-    ],
+    demo: "...",
   },
 ];
