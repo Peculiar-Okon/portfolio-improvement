@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 import Container from "../layout/container";
-import ProjectCard from "./projectcArd";
+import ProjectCard from "./ProjectCard";
 
 import { projects } from "./projects";
 

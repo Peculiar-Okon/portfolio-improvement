@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 import Container from "../layout/container";
-import AboutCard from "./aboutcard";
+import AboutCard from "./AboutCard";
 
 import { about, aboutCards } from "./aboutdata";
 
