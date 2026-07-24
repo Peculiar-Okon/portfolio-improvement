@@ -6,23 +6,23 @@ import Button from "./ui/button";
 const contacts = [
   {
     label: "Email",
-    value: "hello@pearl.dev",
-    href: "mailto:hello@pearl.dev",
+    value: "peculiarken36@gmail.com",
+    href: "mailto:peculiarken36@gmail.com",
   },
   {
     label: "GitHub",
-    value: "github.com/yourname",
-    href: "https://github.com/yourname",
+    value: "Peculiar-Okon",
+    href: "https://github.com/Peculiar-Okon",
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/yourname",
-    href: "https://linkedin.com/in/yourname",
+    value: "Peculiar Kenedy",
+    href: "https://linkedin.com/in/peculiar-kenedy-b94903329",
   },
   {
     label: "X",
-    value: "@yourhandle",
-    href: "https://x.com/yourhandle",
+    value: "@Pearl_thee_dev",
+    href: "https://x.com/Pearl_thee_dev",
   },
   {
     label: "Location",

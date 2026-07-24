@@ -40,13 +40,13 @@ export default function Navbar() {
 
           <Link href="/" className="group">
             <div className="space-y-1">
-              <h2 className="font-serif text-[22px] leading-none tracking-[-0.02em] text-[#262321] transition-colors duration-300 group-hover:text-[#B96A48] sm:text-[28px]">
+              <h2 className="font-serif text-[30px] leading-none tracking-[-0.02em] text-[#262321] transition-colors duration-300 group-hover:text-[#B96A48] sm:text-[36px]">
                 Peculiar Kenedy
               </h2>
 
-              <p className="font-sans text-[9px] uppercase tracking-[0.22em] text-[#7C746D] transition-all duration-300 group-hover:text-[#262321] sm:text-[10px]">
+              {/* <p className="font-sans text-[9px] uppercase tracking-[0.22em] text-[#7C746D] transition-all duration-300 group-hover:text-[#262321] sm:text-[10px]">
                 Software Engineer
-              </p>
+              </p> */}
             </div>
           </Link>
 

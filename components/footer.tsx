@@ -43,7 +43,7 @@ export default function Footer() {
               transition={{ duration: 0.3 }}
               className="font-serif text-3xl text-[#100E0C] sm:text-4xl"
             >
-              Pearl.
+              Peculiar.
             </motion.h2>
 
             <p className="mt-4 sm:mt-5 max-w-md text-[15px] leading-7 text-[#4D4540] sm:text-[17px] sm:leading-8">
@@ -56,7 +56,7 @@ export default function Footer() {
             </p>
 
             <p className="mt-3 sm:mt-4 text-[10px] uppercase tracking-[0.14em] text-[#7E756F]/80 sm:text-xs">
-              © {new Date().getFullYear()} Pearl Okon. All rights reserved.
+              © {new Date().getFullYear()} Peculiar Okon. All rights reserved.
             </p>
           </motion.div>
 

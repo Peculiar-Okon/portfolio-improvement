@@ -5,9 +5,10 @@ import { motion } from "framer-motion";
 interface AboutCardProps {
   label: string;
   value: string;
+  suffix?: string;
 }
 
-export default function AboutCard({ label, value }: AboutCardProps) {
+export default function AboutCard({ label, value, suffix }: AboutCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -22,6 +23,11 @@ export default function AboutCard({ label, value }: AboutCardProps) {
 
       <p className="mt-3 font-serif text-3xl text-[#262321] sm:text-4xl">
         {value}
+        {suffix && (
+          <span className="block text-lg text-[#7A706A] sm:text-xl mt-1">
+            {suffix}
+          </span>
+        )}
       </p>
     </motion.div>
   );

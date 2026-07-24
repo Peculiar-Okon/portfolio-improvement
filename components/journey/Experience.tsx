@@ -9,7 +9,10 @@ export default function Experience() {
         Experience
       </h2>
 
-      <div className="relative border-l border-[#CFC4BD] pl-8 sm:pl-10">
+      <div className="relative">
+        {/* Timeline line — starts below the dot */}
+        <div className="absolute left-0 top-[18px] bottom-0 w-px bg-[#CFC4BD]" />
+
         <ExperienceCard {...experience} />
       </div>
 
