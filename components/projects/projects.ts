@@ -48,7 +48,7 @@ export const projects = [
   {
     id: 3,
 
-    category: "Travel Platform",
+    category: "Full-stack Web Application",
 
     title: "Skyline",
 

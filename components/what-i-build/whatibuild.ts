@@ -27,10 +27,10 @@ export const whatIBuild = [
       "Crafting polished cross-platform mobile experiences with performance, accessibility, and user experience at the center of every decision.",
   },
 
-    {
-    number: "05",
-    title: "Startup Products",
-    description:
-      "Crafting polished cross-platform mobile experiences with performance, accessibility, and user experience at the center of every decision.",
-  },
+{
+  number: "05",
+  title: "Startup Products",
+  description:
+    "Building MVPs and production-ready products that help founders validate ideas, attract users, and scale with confidence.",
+},
 ];
